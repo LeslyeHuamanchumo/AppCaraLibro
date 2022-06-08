@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		88E51DFB283319E100AD016F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E51DFA283319E100AD016F /* AppDelegate.swift */; };
 		88E51DFD283319E100AD016F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E51DFC283319E100AD016F /* SceneDelegate.swift */; };
-		88E51DFF283319E100AD016F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E51DFE283319E100AD016F /* ViewController.swift */; };
 		88E51E02283319E100AD016F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E51E00283319E100AD016F /* Main.storyboard */; };
 		88E51E04283319E200AD016F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E51E03283319E200AD016F /* Assets.xcassets */; };
 		88E51E07283319E200AD016F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E51E05283319E200AD016F /* LaunchScreen.storyboard */; };
+		88E51E1128331B6400AD016F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E51E1028331B6400AD016F /* LoginViewController.swift */; };
+		88E51E1428331B9A00AD016F /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E51E1328331B9A00AD016F /* NewUserViewController.swift */; };
+		88E51E17283320A100AD016F /* RecuperarPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E51E16283320A100AD016F /* RecuperarPassViewController.swift */; };
+		D497BDCC283485B600A28673 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D497BDCA283485B600A28673 /* logo.png */; };
+		D497BDCD283485B600A28673 /* perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = D497BDCB283485B600A28673 /* perfil.png */; };
+		D497BDD028348BA200A28673 /* logotipo.png in Resources */ = {isa = PBXBuildFile; fileRef = D497BDCF28348BA200A28673 /* logotipo.png */; };
+		D497BDD32834906200A28673 /* logo_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D497BDD22834906200A28673 /* logo_menu.png */; };
+		D4C24EE42834595B00851424 /* quicksandlight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4C24EE22834595B00851424 /* quicksandlight.otf */; };
+		D4C24EE52834595B00851424 /* quicksandbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4C24EE32834595B00851424 /* quicksandbold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88E51DF7283319E100AD016F /* AppCaraLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCaraLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E51DFA283319E100AD016F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E51DFC283319E100AD016F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		88E51DFE283319E100AD016F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88E51E01283319E100AD016F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88E51E03283319E200AD016F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88E51E06283319E200AD016F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88E51E08283319E200AD016F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88E51E1028331B6400AD016F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88E51E1328331B9A00AD016F /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		88E51E16283320A100AD016F /* RecuperarPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarPassViewController.swift; sourceTree = "<group>"; };
+		D497BDCA283485B600A28673 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		D497BDCB283485B600A28673 /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
+		D497BDCF28348BA200A28673 /* logotipo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logotipo.png; sourceTree = "<group>"; };
+		D497BDD22834906200A28673 /* logo_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_menu.png; sourceTree = "<group>"; };
+		D4C24EE22834595B00851424 /* quicksandlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksandlight.otf; sourceTree = "<group>"; };
+		D4C24EE32834595B00851424 /* quicksandbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksandbold.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,47 @@
 		88E51DF9283319E100AD016F /* AppCaraLibro */ = {
 			isa = PBXGroup;
 			children = (
+				D4C24EDE283458E100851424 /* Recursos */,
 				88E51DFA283319E100AD016F /* AppDelegate.swift */,
 				88E51DFC283319E100AD016F /* SceneDelegate.swift */,
-				88E51DFE283319E100AD016F /* ViewController.swift */,
 				88E51E00283319E100AD016F /* Main.storyboard */,
 				88E51E03283319E200AD016F /* Assets.xcassets */,
 				88E51E05283319E200AD016F /* LaunchScreen.storyboard */,
 				88E51E08283319E200AD016F /* Info.plist */,
+				88E51E1028331B6400AD016F /* LoginViewController.swift */,
+				88E51E1328331B9A00AD016F /* NewUserViewController.swift */,
+				88E51E16283320A100AD016F /* RecuperarPassViewController.swift */,
 			);
 			path = AppCaraLibro;
+			sourceTree = "<group>";
+		};
+		D497BDC92834828700A28673 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D497BDD22834906200A28673 /* logo_menu.png */,
+				D497BDCF28348BA200A28673 /* logotipo.png */,
+				D497BDCA283485B600A28673 /* logo.png */,
+				D497BDCB283485B600A28673 /* perfil.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		D4C24EDE283458E100851424 /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+				D497BDC92834828700A28673 /* images */,
+				D4C24EDF283458FB00851424 /* fonts */,
+			);
+			path = Recursos;
+			sourceTree = "<group>";
+		};
+		D4C24EDF283458FB00851424 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D4C24EE32834595B00851424 /* quicksandbold.otf */,
+				D4C24EE22834595B00851424 /* quicksandlight.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +172,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D497BDCD283485B600A28673 /* perfil.png in Resources */,
+				D4C24EE42834595B00851424 /* quicksandlight.otf in Resources */,
+				D4C24EE52834595B00851424 /* quicksandbold.otf in Resources */,
+				D497BDD32834906200A28673 /* logo_menu.png in Resources */,
+				D497BDCC283485B600A28673 /* logo.png in Resources */,
+				D497BDD028348BA200A28673 /* logotipo.png in Resources */,
 				88E51E07283319E200AD016F /* LaunchScreen.storyboard in Resources */,
 				88E51E04283319E200AD016F /* Assets.xcassets in Resources */,
 				88E51E02283319E100AD016F /* Main.storyboard in Resources */,
@@ -137,8 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88E51DFF283319E100AD016F /* ViewController.swift in Sources */,
+				88E51E17283320A100AD016F /* RecuperarPassViewController.swift in Sources */,
+				88E51E1128331B6400AD016F /* LoginViewController.swift in Sources */,
 				88E51DFB283319E100AD016F /* AppDelegate.swift in Sources */,
+				88E51E1428331B9A00AD016F /* NewUserViewController.swift in Sources */,
 				88E51DFD283319E100AD016F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
