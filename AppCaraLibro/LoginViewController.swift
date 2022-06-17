@@ -13,23 +13,44 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @IBOutlet weak var boton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.registerKeyboardNotifications()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.unregisterKeyboardNotifications()
+    }
+}
+
+    extension LoginViewController {
         
-        
-        for family in UIFont.familyNames {
-            print(family)
-            for name in UIFont.fontNames(forFamilyName: family){
-                print(name)
-            }
-        }
+        private func registerKeyboardNotifications() {
             
-        setupView()
-    }
-    
-    func setupView() {
-        boton.layer.cornerRadius = 10
-    }
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(self.keyboardWillShow(_:)),
+                                                   name: UIResponder.keyboardWillShowNotification,
+                                                   object: nil)
+            
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(self.keyboardWillHide(_:)),
+                                                   name: UIResponder.keyboardWillHideNotification,
+                                                   object: nil)
+        }
+        
+        private func unregisterKeyboardNotifications() {
+            
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+        
+        @objc private func keyboardWillShow(_ notification: Notification) {
+            print(notification.userInfo ?? "sin data")
+        }
+        
+        @objc private func keyboardWillHide(_ notification: Notification) {
+            print("teclado desaparece")
+        }
 }
