@@ -264,6 +264,9 @@
                                 <state key="normal" title="Ingresar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonAction:" destination="K47-TZ-bbd" eventType="touchUpInside" id="Kue-HM-3oF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿No tienes cuenta?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-p5-sgV">
                                 <rect key="frame" x="29" y="684.5" width="356" height="20"/>
@@ -284,6 +287,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginButtonAction:" destination="K47-TZ-bbd" eventType="touchUpInside" id="fIu-b2-zUy"/>
                                     <segue destination="ZAf-Fp-Evb" kind="show" id="qeF-he-8Ec"/>
                                 </connections>
                             </button>
@@ -325,6 +329,12 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="jLX-0C-Fjo"/>
+                    <connections>
+                        <outlet property="email" destination="JO1-qq-6PO" id="GJA-IM-3jg"/>
+                        <outlet property="login" destination="Odq-ON-xRN" id="87V-MJ-2eg"/>
+                        <outlet property="password" destination="5H0-6e-ixd" id="8q5-6r-nIF"/>
+                        <outlet property="singup" destination="dmv-xt-ps1" id="sza-Cv-rmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gT8-DB-iap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="KhG-h2-JTG">
@@ -1126,7 +1136,7 @@
         <image name="logotipo.png" width="207" height="178.5"/>
         <image name="perfil.png" width="397.20001220703125" height="397.20001220703125"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Color">
             <color red="0.47058823704719543" green="0.7607843279838562" blue="0.64313727617263794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

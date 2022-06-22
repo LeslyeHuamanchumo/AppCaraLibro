@@ -6,11 +6,22 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var singup: UIButton!
+    
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer){
         self.view.endEditing(true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Aunticacion"
     }
     
     
@@ -22,6 +33,26 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.unregisterKeyboardNotifications()
+    }
+    
+    // falta validacion si la contrase;a es correcta
+    @IBAction func signUpButtonAction(_ sender: Any) {
+        if let email = email.text, let password = password.text{
+            Auth.auth().createUser(withEmail: email, password: password) {
+                (result, error) in
+                if let result = result, error == nil {
+                    
+                }else{   // marcar'a que se ha producido un error
+                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    @IBAction func loginButtonAction(_ sender: Any) {
+        
     }
 }
 
