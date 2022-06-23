@@ -201,6 +201,73 @@
             </objects>
             <point key="canvasLocation" x="-1712" y="-360"/>
         </scene>
+        <!--Guardar Login View Controller-->
+        <scene sceneID="9WN-UD-7F3">
+            <objects>
+                <viewController id="GYZ-RH-cPk" customClass="GuardarLoginViewController" customModule="AppCaraLibro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pGT-Ph-ejc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfo-lF-hmQ">
+                                <rect key="frame" x="29" y="222" width="356" height="48.5"/>
+                                <color key="backgroundColor" name="Mediumaquamarine"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48.5" id="DSS-5Y-tcx"/>
+                                    <constraint firstAttribute="height" constant="48.5" id="Z0A-Op-XVg"/>
+                                </constraints>
+                                <state key="normal" title="Cerrar Sesion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrarSesionButtonAction:" destination="GYZ-RH-cPk" eventType="touchUpInside" id="Cgs-1X-eFb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KW-Y2-a0K">
+                                <rect key="frame" x="29" y="94" width="356" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="eMl-Nq-qKf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proveedor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5v-J8-iJd">
+                                <rect key="frame" x="29" y="158" width="356" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="bOU-Td-SEB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d0h-Af-G5w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4KW-Y2-a0K" firstAttribute="top" secondItem="d0h-Af-G5w" secondAttribute="top" constant="50" id="Ao2-DY-P0h"/>
+                            <constraint firstItem="lfo-lF-hmQ" firstAttribute="leading" secondItem="d0h-Af-G5w" secondAttribute="leading" constant="29" id="PIw-7y-urr"/>
+                            <constraint firstItem="lfo-lF-hmQ" firstAttribute="top" secondItem="R5v-J8-iJd" secondAttribute="bottom" constant="30" id="S3x-gv-eKf"/>
+                            <constraint firstItem="d0h-Af-G5w" firstAttribute="trailing" secondItem="4KW-Y2-a0K" secondAttribute="trailing" constant="29" id="aS7-mS-oqJ"/>
+                            <constraint firstItem="d0h-Af-G5w" firstAttribute="trailing" secondItem="R5v-J8-iJd" secondAttribute="trailing" constant="29" id="dgL-kf-dUE"/>
+                            <constraint firstItem="d0h-Af-G5w" firstAttribute="trailing" secondItem="lfo-lF-hmQ" secondAttribute="trailing" constant="29" id="hgy-bp-COC"/>
+                            <constraint firstItem="4KW-Y2-a0K" firstAttribute="leading" secondItem="d0h-Af-G5w" secondAttribute="leading" constant="29" id="jno-te-wTY"/>
+                            <constraint firstItem="R5v-J8-iJd" firstAttribute="top" secondItem="4KW-Y2-a0K" secondAttribute="bottom" constant="30" id="ofQ-th-ZJd"/>
+                            <constraint firstItem="R5v-J8-iJd" firstAttribute="leading" secondItem="d0h-Af-G5w" secondAttribute="leading" constant="29" id="xST-rs-jnf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cerrarSesionButton" destination="lfo-lF-hmQ" id="WTi-Jj-FBx"/>
+                        <outlet property="email" destination="4KW-Y2-a0K" id="2ZF-2v-DyR"/>
+                        <outlet property="emailLabel" destination="4KW-Y2-a0K" id="8kn-6R-0LC"/>
+                        <outlet property="proveedor" destination="R5v-J8-iJd" id="tjE-Im-43Y"/>
+                        <outlet property="proveedorLabel" destination="R5v-J8-iJd" id="fYH-GQ-jXn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af6-2y-hEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-907.24637681159425" y="-1110.2678571428571"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="RVo-TA-Df4">
             <objects>
@@ -560,7 +627,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNG-jh-HG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1065" y="808"/>
+            <point key="canvasLocation" x="-981" y="595"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="N9U-5i-xID">

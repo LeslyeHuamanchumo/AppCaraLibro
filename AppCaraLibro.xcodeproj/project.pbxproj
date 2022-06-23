@@ -27,6 +27,7 @@
 		D4F4A0042863D9AB00E457FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4A0032863D9AB00E457FE /* FirebaseAuth */; };
 		D4F4A0062863D9AB00E457FE /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4A0052863D9AB00E457FE /* FirebaseAnalyticsSwift */; };
 		D4F4A0082863D9AB00E457FE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D4F4A0072863D9AB00E457FE /* FirebaseDatabase */; };
+		D4F4A00B2863EDE800E457FE /* GuardarLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F4A00A2863EDE800E457FE /* GuardarLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		D4C24EE22834595B00851424 /* quicksandlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksandlight.otf; sourceTree = "<group>"; };
 		D4C24EE32834595B00851424 /* quicksandbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = quicksandbold.otf; sourceTree = "<group>"; };
 		D4F49FFB2863CC6C00E457FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4F4A00A2863EDE800E457FE /* GuardarLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardarLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				88E51E1028331B6400AD016F /* LoginViewController.swift */,
 				88E51E1328331B9A00AD016F /* NewUserViewController.swift */,
 				88E51E16283320A100AD016F /* RecuperarPassViewController.swift */,
+				D4F4A00A2863EDE800E457FE /* GuardarLoginViewController.swift */,
 			);
 			path = AppCaraLibro;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				88E51E1128331B6400AD016F /* LoginViewController.swift in Sources */,
 				88E51DFB283319E100AD016F /* AppDelegate.swift in Sources */,
 				88E51E1428331B9A00AD016F /* NewUserViewController.swift in Sources */,
+				D4F4A00B2863EDE800E457FE /* GuardarLoginViewController.swift in Sources */,
 				88E51DFD283319E100AD016F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

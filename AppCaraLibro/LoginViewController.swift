@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseAnalytics
 
 class LoginViewController: UIViewController {
     
@@ -22,8 +23,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Aunticacion"
+        
+        // Analitics Event
+        Analytics.logEvent("InitScreen", parameters: ["mensaje":"Integracion de firebase completa"])
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,10 +40,13 @@ class LoginViewController: UIViewController {
     
     // falta validacion si la contrase;a es correcta
     @IBAction func signUpButtonAction(_ sender: Any) {
+        
         if let email = email.text, let password = password.text{
             Auth.auth().createUser(withEmail: email, password: password) {
                 (result, error) in
                 if let result = result, error == nil {
+                    
+                    self.navigationController?.pushViewController(GuardarLoginViewController(email: result.user.email!, provider: .basic), animated: true)
                     
                 }else{   // marcar'a que se ha producido un error
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
@@ -52,6 +58,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonAction(_ sender: Any) {
+        
+        if let email = email.text, let password = password.text{
+            Auth.auth().signIn(withEmail: email, password: password) {
+                (result, error) in
+                if let result = result, error == nil {
+                    
+                    self.navigationController?.pushViewController(GuardarLoginViewController(email: result.user.email!, provider: .basic), animated: true)
+                    
+                }else{   // marcar'a que se ha producido un error
+                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
         
     }
 }
