@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RecuperarPassViewController: UIViewController {
+class RecuperarPassViewController: UIViewController {       
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer){
         self.view.endEditing(true)

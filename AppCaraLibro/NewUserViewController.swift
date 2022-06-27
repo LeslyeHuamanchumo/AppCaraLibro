@@ -6,13 +6,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class NewUserViewController: UIViewController {
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
+    @IBOutlet weak var nombreTextField: UITextField!
+    @IBOutlet weak var correoTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registrarButton: UIButton!
+        
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer){
         self.view.endEditing(true)
+    }
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +36,8 @@ class NewUserViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.unregisterKeyboardNotifications()
     }
+    
+    
 }
 
 extension NewUserViewController {

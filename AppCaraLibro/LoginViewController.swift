@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var login: UIButton!
-    @IBOutlet weak var singup: UIButton!
+    @IBOutlet weak var signIn: UIButton!
     
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer){
         self.view.endEditing(true)
@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Aunticacion"
+        title = "Autenticacion"
         
         // Analitics Event
         Analytics.logEvent("InitScreen", parameters: ["mensaje":"Integracion de firebase completa"])
@@ -38,17 +38,17 @@ class LoginViewController: UIViewController {
         self.unregisterKeyboardNotifications()
     }
     
-    // falta validacion si la contrase;a es correcta
-    @IBAction func signUpButtonAction(_ sender: Any) {
+    @IBAction func signInButtonAction (_ sender: Any) {
         
-        if let email = email.text, let password = password.text{
+        if let email = email.text, let password = password.text {
+            
             Auth.auth().createUser(withEmail: email, password: password) {
                 (result, error) in
                 if let result = result, error == nil {
                     
                     self.navigationController?.pushViewController(GuardarLoginViewController(email: result.user.email!, provider: .basic), animated: true)
                     
-                }else{   // marcar'a que se ha producido un error
+                }else{   // marcara que se ha producido un error
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     self.present(alertController, animated: true, completion: nil)
@@ -57,6 +57,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // falta validar si la contrasena es correcta
     @IBAction func loginButtonAction(_ sender: Any) {
         
         if let email = email.text, let password = password.text{
@@ -66,14 +67,13 @@ class LoginViewController: UIViewController {
                     
                     self.navigationController?.pushViewController(GuardarLoginViewController(email: result.user.email!, provider: .basic), animated: true)
                     
-                }else{   // marcar'a que se ha producido un error
+                }else{   // marca si se ha producido un error
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     self.present(alertController, animated: true, completion: nil)
                 }
             }
         }
-        
     }
 }
 
