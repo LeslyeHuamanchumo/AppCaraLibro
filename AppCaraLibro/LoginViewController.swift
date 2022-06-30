@@ -39,6 +39,19 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func signInButton(_ sender: Any) {
+        let auth = Auth.auth()
+        
+        auth.signIn(withEmail: email.text!, password: password.text!) { (authResult, error) in
+            if error != nil {
+                self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
+                return
+            }
+            self.performSegue(withIdentifier: "userSignedInSegue", sender: nil)  // tengo dudas
+        }
+    }
+    
+    
 }
 
     extension LoginViewController {
