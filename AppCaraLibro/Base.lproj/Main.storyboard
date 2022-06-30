@@ -180,6 +180,7 @@
                         <outlet property="email" destination="oUd-36-pcX" id="hCw-r6-mAJ"/>
                         <outlet property="password" destination="2Kp-SG-yOp" id="JtO-sm-pM6"/>
                         <outlet property="signUpButton" destination="dfW-Vd-c6b" id="KNi-Uh-Fxh"/>
+                        <outlet property="userName" destination="pzJ-ux-1tI" id="2eD-uo-SGE"/>
                         <segue destination="dte-uE-Or3" kind="show" identifier="userSignedUpSegue" id="IgB-eA-JgG"/>
                     </connections>
                 </viewController>
@@ -190,7 +191,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="12" y="182"/>
+            <point key="canvasLocation" x="110" y="285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C98-hv-i2w">
@@ -444,7 +445,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1074" y="-1268"/>
+            <point key="canvasLocation" x="110" y="-845"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="QMi-Be-ET9">
@@ -474,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixF-Oy-06c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="-261"/>
+            <point key="canvasLocation" x="1961" y="-360"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Oi-SK-1Ad">
@@ -1070,7 +1071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqC-ok-d30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="799"/>
+            <point key="canvasLocation" x="1296" y="753"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ANv-34-rJ1">
@@ -1183,7 +1184,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sad-JI-dis"/>
+        <segue reference="IgB-eA-JgG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logotipo.png" width="207" height="178.5"/>

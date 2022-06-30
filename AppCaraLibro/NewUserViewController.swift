@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class NewUserViewController: UIViewController {
     
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
@@ -36,17 +37,14 @@ class NewUserViewController: UIViewController {
     }
     
     @IBAction func signUpButtonAction (_ sender: Any) {
-        let auth = Auth.auth()
-        
-        auth.createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
-            if error != nil {
-                self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
-                return
-            }
-            self.performSegue(withIdentifier: "userSignedUpSegue", sender: nil)  // tengo dudas
+        Service.signUpUser(email: email.text!, password: password.text!, name: userName.text!, onSuccess: {
+            self.performSegue(withIdentifier: "userSignedUpSegue", sender: nil)
+        }) {(error) in
+            self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
         }
-    } 
-    
+
+        self.performSegue(withIdentifier: "userSignedUpSegue", sender: nil)  // tengo dudas
+    }     
 }
 
 extension NewUserViewController {
