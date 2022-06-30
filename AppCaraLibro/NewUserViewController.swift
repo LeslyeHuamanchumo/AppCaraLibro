@@ -6,19 +6,17 @@
 //
 
 import UIKit
-import FirebaseDatabase
 import FirebaseAuth
+
 
 class NewUserViewController: UIViewController {
     
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
     
-    @IBOutlet weak var nombreTextField: UITextField!
-    @IBOutlet weak var correoTextField: UITextField!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var registrarButton: UIButton!
-        
     @IBAction private func tapToCloseKeyboard(sender: UITapGestureRecognizer){
         self.view.endEditing(true)
     }
@@ -37,6 +35,17 @@ class NewUserViewController: UIViewController {
         self.unregisterKeyboardNotifications()
     }
     
+    @IBAction func signUpButtonAction (_ sender: Any) {
+        let auth = Auth.auth()
+        
+        auth.createUser(withEmail: email.text!, password: password.text!) { (authResult, error) in
+            if error != nil {
+                self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
+                return
+            }
+            self.performSegue(withIdentifier: "userSignedUpSegue", sender: nil)  // tengo dudas
+        }
+    } 
     
 }
 
