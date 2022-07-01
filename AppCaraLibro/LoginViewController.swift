@@ -38,7 +38,6 @@ class LoginViewController: UIViewController {
         self.performSegue(withIdentifier: "signUpSegue", sender: nil)
     }
     
-    
     @IBAction func signInButton(_ sender: Any) {
         let auth = Auth.auth()
         
@@ -49,9 +48,11 @@ class LoginViewController: UIViewController {
             }
             self.performSegue(withIdentifier: "userSignedInSegue", sender: nil)  // tengo dudas
         }
-    }
+    }    
     
-    
+    @IBAction func resetPassButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "ResetPassSegue", sender: nil)
+    }    
 }
 
     extension LoginViewController {

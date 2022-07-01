@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class NewUserViewController: UIViewController {
     
+    @IBOutlet weak var nameLastName: UITextField!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -37,7 +38,7 @@ class NewUserViewController: UIViewController {
     }
     
     @IBAction func signUpButtonAction (_ sender: Any) {
-        Service.signUpUser(email: email.text!, password: password.text!, name: userName.text!, onSuccess: {
+        Service.signUpUser(email: email.text!, password: password.text!, name: userName.text!, namelastname: nameLastName.text!, onSuccess: {
             self.performSegue(withIdentifier: "userSignedUpSegue", sender: nil)
         }) {(error) in
             self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)

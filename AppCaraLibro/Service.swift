@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class Service {
     
-    static func signUpUser(email: String, password: String, name: String, onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
+    static func signUpUser(email: String, password: String, name: String, namelastname: String, onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
         let auth = Auth.auth()
         
         auth.createUser(withEmail: email, password: password) { (authResult, error) in
@@ -20,17 +20,17 @@ class Service {
                
                 return
             }
-            upLoadToDatabase(email: email, name: name, onSuccess: onSuccess)
+            upLoadToDatabase(email: email, name: name, namelastname: namelastname, onSuccess: onSuccess)     // aqui agregamos dato
         }
     }
     
-    // funcion cargamos a la database
-    static func upLoadToDatabase(email: String, name: String, onSuccess: @escaping () -> Void) {
+    // Cargamos a la database
+    static func upLoadToDatabase(email: String, name: String, namelastname: String, onSuccess: @escaping () -> Void) {    // aqui agregamos dato
         let ref = Database.database().reference()
         let uid = Auth.auth().currentUser?.uid
         
         // Dentro de este hijo vamos a guardar la info de los usuarios
-        ref.child("usuarios").child(uid!).setValue(["email": email, "name": name])
+        ref.child("usuarios").child(uid!).setValue(["email": email, "name": name, "namelastname": namelastname])    // aqui agregamos dato
         onSuccess()
     }
     
